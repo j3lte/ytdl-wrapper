@@ -1,5 +1,5 @@
 import type { NotFoundError, YTDLEventEmitter } from "./types.ts";
-import { type ChildProcess, runSync } from "@gnome/exec";
+import { type ChildProcess, runSync } from "./exec/mod.ts";
 import { WINDOWS } from "@gnome/runtime-info";
 
 /**

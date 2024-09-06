@@ -1,5 +1,5 @@
 import { EventEmitter } from "@denosaurs/event";
-import { type CommandOptions, type Output, output, spawn } from "@gnome/exec";
+import { type CommandOptions, type Output, output, spawn } from "./exec/mod.ts";
 
 import type { MediaInfo, YTDLEventEmitter, YTDLWrapperOptions } from "./types.ts";
 import { bindAbortSignal, createError, createNotFoundError, emitYoutubeDlEvents, readStream } from "./utils.ts";
