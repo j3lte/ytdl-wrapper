@@ -3,5 +3,5 @@ import process from "node:process";
 const g = globalThis as any;
 
 if (!g.process) {
-    g.process = process;
+  g.process = process;
 }

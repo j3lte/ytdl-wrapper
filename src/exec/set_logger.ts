@@ -12,9 +12,9 @@ let logger: undefined | ((file: string, args?: string[]) => void) = undefined;
  * ```
  */
 export function setLogger(defaultLogger?: (file: string, args?: string[]) => void): void {
-    logger = defaultLogger;
+  logger = defaultLogger;
 }
 
 export function getLogger(): undefined | ((file: string, args?: string[]) => void) {
-    return logger;
+  return logger;
 }
