@@ -1,0 +1,7 @@
+testing*
+.artifacts
+node_modules
+ytdlp
+output
+.DS_Store
+output.*
