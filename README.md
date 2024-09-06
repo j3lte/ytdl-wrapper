@@ -1,5 +1,8 @@
 # @j3lte/ytdl-wrapper
 
+[![JSR](https://jsr.io/badges/@j3lte/ytdl-wrapper)](https://jsr.io/@j3lte/ytdl-wrapper)
+[![GitHub Release](https://img.shields.io/github/v/release/j3lte/ytdl-wrapper)](https://github.com/j3lte/ytdl-wrapper/releases/latest)
+
 ## Overview
 
 This is a simple module that wraps **[yt-dlp](https://github.com/yt-dlp/yt-dlp)**

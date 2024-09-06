@@ -40,8 +40,6 @@ export type Events = {
   progress: [Progress];
   /** Emitted when an event occurs */
   event: [eventType: string, eventData: string];
-  /** Emitted if the line is not recognized as an event */
-  debug: [string];
 };
 
 /**
@@ -66,7 +64,7 @@ export type MediaInfo = Record<string, unknown> & {
 };
 
 /**
- * Errpr Type for when the media is not found
+ * Error Type for when the media is not found
  *
  * This is thrown by `YTDLWrapper.execPromise`
  *

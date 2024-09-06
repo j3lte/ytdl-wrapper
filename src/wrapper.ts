@@ -11,13 +11,23 @@ export class YTDLWrapper {
   #path: string;
   #progressRegex: RegExp = /\[download\] *(.*) of[ ~]*([^ ]*)(:? *at *([^ ]*))?(:? *ETA *([^ ]*))?/i;
 
-  /**
-   * Create a new YTDLWrapper
-   *
-   * @param path Path to the yt-dlp executable (default: "yt-dlp", needs to be in the PATH). If you want to use a specific yt-dlp binary, you can specify the path here, this needs to be an absolute path.
-   * @param options Options for the wrapper
-   */
-  constructor(path: string = "yt-dlp", options: YTDLWrapperOptions = {}) {
+  constructor(
+    /**
+     * Path to the yt-dlp executable
+     *
+     * > **Note:** This can be an absolute path, or the executable should be in the PATH
+     *
+     * @default "yt-dlp"
+     * @example "/usr/local/bin/yt-dlp"
+     */
+    path: string = "yt-dlp",
+    /**
+     * Options for the wrapper
+     *
+     * @default {}
+     */
+    options: YTDLWrapperOptions = {},
+  ) {
     this.#path = path;
 
     if (options.progressRegex) {
@@ -32,7 +42,14 @@ export class YTDLWrapper {
     return this.#path;
   }
 
-  set path(path: string) {
+  /**
+   * Set the path to the yt-dlp executable
+   *
+   * > **Note:** This can be an absolute path, or the executable should be in the PATH
+   *
+   * @param path Path to the yt-dlp executable
+   */
+  setPath(path: string) {
     this.#path = path;
   }
 
@@ -43,7 +60,14 @@ export class YTDLWrapper {
     return this.#progressRegex;
   }
 
-  set progressRegex(regex: RegExp) {
+  /**
+   * Set the regular expression used to parse progress data from yt-dlp
+   *
+   * > **Note:** This is used to parse the progress data from yt-dlp. It should not be needed to change this, unless you are making changes to the progress template in yt-dlp (using the `--progress-template` option)
+   *
+   * @param regex Regular expression to use
+   */
+  setProgressRegex(regex: RegExp) {
     this.#progressRegex = regex;
   }
 
